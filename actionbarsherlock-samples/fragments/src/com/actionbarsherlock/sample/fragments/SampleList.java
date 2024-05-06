@@ -93,7 +93,7 @@ public class SampleList extends SherlockListActivity {
         String[] prefixPath;
         String prefixWithSlash = prefix;
 
-        if (prefix.equals("")) {
+        if ("".equals(prefix)) {
             prefixPath = null;
         } else {
             prefixPath = prefix.split("/");
@@ -123,7 +123,7 @@ public class SampleList extends SherlockListActivity {
                             info.activityInfo.name));
                 } else {
                     if (entries.get(nextLabel) == null) {
-                        addItem(myData, nextLabel, browseIntent(prefix.equals("") ? nextLabel : prefix + "/" + nextLabel));
+                        addItem(myData, nextLabel, browseIntent("".equals(prefix) ? nextLabel : prefix + "/" + nextLabel));
                         entries.put(nextLabel, true);
                     }
                 }

@@ -1,5 +1,6 @@
 package com.actionbarsherlock.sample.demos;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import android.content.Context;
@@ -17,7 +18,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
 
 public class FeatureToggles extends SherlockActivity implements ActionBar.TabListener {
-    private static final Random RANDOM = new Random();
+    private static final Random RANDOM = new SecureRandom();
 
     private int items = 0;
 
